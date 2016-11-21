@@ -16,8 +16,16 @@ publishing {
         }
     }
 }
+test {
+    testLogging {
+        // Make sure output from
+        // standard out or error is shown
+        // in Gradle output.
+        showStandardStreams = true
+    }
+}
+
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.11'
     compile gradleApi()
     compile localGroovy()
     compile 'org.eclipse.jgit:org.eclipse.jgit:4.1.1.201511131810-r'
